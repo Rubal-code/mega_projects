@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300" rel="stylesheet" type="text/css"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <style>
+        body{
+            background-image: url("wheat-field-sunset_23-2151994360.jpg");
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 500px;
+            margin-right: 150px;
+            background-size: cover;        /* Makes the image cover the entire background */
+            background-repeat: no-repeat;  /* Prevents tiling/repeating */
+            background-position: center;   /* Centers the image */
+            height: 100vh;                 /* Ensures it covers the full viewport */
+        }
+        h1{
+            margin-left:160px;
+            color: black;
+        }
+        input{
+            width: 70%;
+            padding: 12px 20px;
+            margin: 6px 0;
+            box-sizing: border-box;
+            border-bottom: 4px solid black;
+        }
+        button{
+            background-color: brown;
+            margin: auto;
+            color: white;
+            padding: 15px 100px;
+            text-align: center;
+            text-decoration: none;
+            display:inline-block;
+            font-size: 16px;
+            margin-left: 170px;
+
+        }
+        #predi{
+            margin-left: 180px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Crop Predicton Model</h1>
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="text" name="Nitrogen" placeholder="Nitrogen" required="required"/>
+            <input type="text" name="Phosphorous" placeholder="Phosphorous" required="required"/>
+            <input type="text" name="Potassium" placeholder="Potassium" required="required"/>
+            <input type="text" name="temprature" placeholder="temprature" required="required"/>
+            <input type="text" name="humidity" placeholder="humidity" required="required"/>
+            <input type="text" name="pH" placeholder="pH" required="required"/>
+            <input type="text" name="rainfall" placeholder="rainfall" required="required"/>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+
+        </form>
+        <h1 id="predi">{{predicton_text}}</h1>
+    </div>
+</body>
+</html>

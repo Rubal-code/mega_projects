@@ -1,0 +1,10 @@
+machine learning model(pycharm) --> web page(pycharm) --> integration using flask(pycharm)
+
+to activate the virtual enviroment follow these steps
+1)  python -m venv venv
+2) .\venv\Scripts\activate
+3) install the dependencies you need 
+4) make the project
+5) pip freeze > requirements.txt  --> tell which requirements i have been used 
+6) pip install -r requirements.txt --> to make download that categories in agian if you want for another project
+7) deactivate -> virtual enviroment
