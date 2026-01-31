@@ -89,3 +89,4 @@ def predict_pdf(file: UploadFile = File(...)):
         "filename": file.filename,
         "prediction": prediction.tolist()
     }
+ 

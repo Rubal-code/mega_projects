@@ -66,10 +66,79 @@ def extract_name(text):
 
 def extract_skills(text):
     skills_db = [
-        "python", "java", "c++", "sql", "machine learning",
-        "deep learning", "data science", "html", "css",
-        "javascript", "react", "fastapi", "django"
-    ]
+
+    # ---------------- TECH / ENGINEERING ----------------
+    "python", "java", "c++", "c", "sql", "nosql", "mongodb",
+    "machine learning", "deep learning", "data science",
+    "nlp", "computer vision", "tensorflow", "pytorch",
+    "html", "css", "javascript", "typescript",
+    "react", "angular", "vue",
+    "node.js", "express", "fastapi", "django", "flask",
+    "spring", "spring boot",
+    "git", "github", "docker", "kubernetes",
+    "aws", "azure", "gcp",
+    "linux", "unix", "rest api", "microservices",
+
+    # ---------------- DATA / ANALYTICS ----------------
+    "power bi", "tableau", "excel", "advanced excel",
+    "data analysis", "data analytics", "statistics",
+    "business intelligence", "etl", "data warehousing",
+    "big data", "hadoop", "spark",
+
+    # ---------------- MARKETING ----------------
+    "digital marketing", "seo", "sem", "smm",
+    "content marketing", "email marketing",
+    "google analytics", "google ads", "facebook ads",
+    "branding", "market research",
+    "lead generation", "campaign management",
+    "copywriting", "marketing strategy",
+
+    # ---------------- SALES ----------------
+    "sales", "inside sales", "b2b sales", "b2c sales",
+    "crm", "salesforce", "hubspot",
+    "cold calling", "negotiation",
+    "account management", "pipeline management",
+    "customer acquisition",
+
+    # ---------------- FINANCE ----------------
+    "financial analysis", "financial modeling",
+    "accounting", "bookkeeping",
+    "budgeting", "forecasting",
+    "taxation", "gst", "income tax",
+    "investment analysis", "equity research",
+    "risk management", "corporate finance",
+    "balance sheet", "profit and loss", "cash flow",
+    "auditing",
+
+    # ---------------- HR ----------------
+    "human resources", "recruitment",
+    "talent acquisition", "hr analytics",
+    "payroll", "performance management",
+    "employee engagement",
+    "training and development",
+    "onboarding", "labor law",
+
+    # ---------------- OPERATIONS / MANAGEMENT ----------------
+    "operations management", "supply chain",
+    "logistics", "inventory management",
+    "process improvement", "six sigma",
+    "lean management", "project management",
+    "agile", "scrum",
+    "stakeholder management",
+
+    # ---------------- DESIGN / CREATIVE ----------------
+    "ui design", "ux design", "figma",
+    "adobe photoshop", "illustrator",
+    "indesign", "canva",
+    "wireframing", "prototyping",
+
+    # ---------------- SOFT SKILLS ----------------
+    "communication", "presentation",
+    "problem solving", "critical thinking",
+    "leadership", "teamwork",
+    "time management", "decision making",
+    "adaptability", "creativity"
+]
     text = text.lower()
     found = [skill for skill in skills_db if skill in text]
     return found if found else ["Not detected"]
