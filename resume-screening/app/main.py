@@ -6,6 +6,7 @@ import os
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from PyPDF2 import PdfReader
+import uvicorn
 
 # ---------------------------
 # FastAPI app
@@ -30,8 +31,8 @@ tfidf = joblib.load(tfidf_path)
 # ---------------------------
 # NLTK setup (download once)
 # ---------------------------
-nltk.download("stopwords")
-nltk.download("wordnet")
+# nltk.download("stopwords")
+# nltk.download("wordnet")
 
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words("english"))
@@ -90,3 +91,5 @@ def predict_pdf(file: UploadFile = File(...)):
         "prediction": prediction.tolist()
     }
  
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
