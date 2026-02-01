@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-scikit-learn
-numpy
-pandas
-nltk
-PyPDF2
